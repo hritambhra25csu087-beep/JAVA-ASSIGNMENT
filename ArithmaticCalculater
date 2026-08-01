@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class ArithmaticCalculater{
+    public static void main(String[] args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter integer a");
+        int a= sc.nextInt();
+          System.out.println("enter integer b");
+        int b= sc.nextInt();
+         System.out.println("enter 1 for addition");
+          System.out.println("enter Choice 2 for substraction");
+           System.out.println("enter Choice 3 for multiplication");
+            System.out.println("enter Choice 4 for quotient");
+             System.out.println("enter Choice 5 for remainder ");
+        System.out.println("enter Choice");
+        int choice= sc.nextInt();
+        int answer;
+        if(choice==1)
+        {
+            System.out.println(answer=a+b);
+        }
+       else if(choice==2)
+        {
+            System.out.println(answer=a-b);
+            
+        }
+        else if(choice==3)
+        {
+            System.out.println(answer=a*b);
+
+        }
+        else if(choice==4)
+        {
+            System.out.println(answer=a/b);
+
+        }
+        else if(choice==5)
+        {
+            System.out.println(answer=a%b);
+
+        }
+        else
+        {
+            System.out.println("INVALID");
+        }
+        sc.close();
+    
+
+    }
+}
