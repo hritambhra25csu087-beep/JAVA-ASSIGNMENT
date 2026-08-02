@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class DigitExtraction{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter any three digit number");
+        int number=sc.nextInt();
+        int hundred,tens;
+        hundred=number/100;
+        System.out.println("HUNDRED:"+ hundred);
+        number=number%100;
+        tens=number/10;
+        System.out.println("TENS:"+ tens);
+        number=number%10;
+        System.out.println("ONES:"+ number);
+        sc.close();
+
+    }
+}
