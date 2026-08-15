@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class DrivenCalculater {
+public static void main(String[] args)
+{ int choice;
+    do
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the first number");
+        int a=sc.nextInt();
+        System.out.println("Enter the second number");
+        int b=sc.nextInt();
+        int result;
+        System.out.println("Enter the choice");
+        System.out.println("1.Addition");
+        System.out.println("2.Subtraction");
+        System.out.println("3.Multiplication");
+        System.out.println("4.Division");
+         choice=sc.nextInt();
+        switch(choice)
+        {
+            case 1:
+                result=(a+b);
+                System.out.println("Addition of two numbers is"+ result);
+                break;
+                case 2:
+                result=(a-b);
+                System.out.println("Subtraction of two numbers is"+ result);
+                break;
+                case 3:
+                result=(a*b);
+                System.out.println("Multiplication of two numbers is"+ result);
+                break;
+                case 4:
+                    if(b==0)
+                    {
+                        System.out.println("Division by zero is not possible");
+                    }
+                    else
+                    {
+                        result=(a/b);
+                        System.out.println("Division of two numbers is"+ result);
+                    }
+                break;
+                default:
+                System.out.println("Invalid choice");
+                break;
+        }
+        ;
+
+    }while( choice !=0);
+}
+
+}
