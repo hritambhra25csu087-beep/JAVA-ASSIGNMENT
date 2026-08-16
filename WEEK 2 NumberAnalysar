@@ -1,0 +1,77 @@
+import java.util.Scanner;
+public class NumberAnalyser
+{
+    
+public static int ReadNumber(int num)
+{
+    Scanner sc = new Scanner(System.in);
+    System.out.println("ENTER NUMBER");
+    num = sc.nextInt();
+    System.out.println("THE NUMBER IS : "+num);
+    return num;
+    
+}
+public static boolean IsEven(int num)
+{
+while( num!=0)
+{
+    if(num%2==0)
+    {
+        System.out.println("IS EVEN");
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+return false;
+}
+public static boolean IsPositive(int num)
+{
+    if(num>=0)
+    {
+        System.out.println("NUMBER IS POSITIVE");
+        return true;
+    }
+    else
+    {
+        System.out.println("NUMBER IS NEGATIVE");
+    }
+
+    return false;   
+}
+public static int AbsoluteValue(int num)
+{
+    if(num<0)
+    {
+        return - num;
+    }
+    System.out.println("THE ABSOLUTE VALUE : "+num);
+    return num;
+}
+public static int CountDigits(int num)
+{
+    int count = 0;
+    while(num!=0)
+    {
+    num = num/10;
+    count++;
+    }
+    System.out.println("THE COUNT OF THE DIGITS IS :"+count);
+    return count;
+}
+public static int SumOfDigits(int num)
+{
+    int sum =0;
+    while(num!=0)
+    {
+        int digit = num%10;
+        sum+=digit;
+        num = num/10;
+    }
+    System.out.println("THE SUM OF DIGITS : "+ sum);
+    return sum;
+}
+
+}
