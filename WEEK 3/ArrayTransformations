@@ -1,0 +1,67 @@
+import java.util.Scanner;
+public class ArrayTransformations {
+    public static void ReadArray(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array");
+        int n= sc.nextInt();
+        int[] arr=new int [n];
+        System.out.println("Enter the elements of the array");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+    }
+    public static int[] ReverseInPlace(int[] arr){
+        int start=0;
+        int end=arr.length-1;
+        while(start<end)
+        {
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+        return arr;
+    }
+    public static int[] ReversedCopy(int[] arr){
+        int[] reversedArr=new int[arr.length];
+        for(int i=0;i<arr.length;i++)
+        {
+            reversedArr[i]=arr[arr.length-1-i];
+        }
+        return reversedArr;
+    }
+    public static int[] RemoveValues(int[] arr, int target){
+        int count=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]!=target)
+            {
+                count++;
+            }
+        }
+        int[] newArr=new int[count];
+        int index=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]!=target)
+            {
+                newArr[index]=arr[i];
+                index++;
+            }
+        }
+        return newArr;
+    }
+    public static int[] RunnimgSum(int[] arr){
+        int[] runningSumArr=new int[arr.length];
+        runningSumArr[0]=arr[0];
+        for(int i=1;i<arr.length;i++)
+        {
+            runningSumArr[i]=runningSumArr[i-1]+arr[i];
+        }
+        return runningSumArr;
+    }   
+
+}
